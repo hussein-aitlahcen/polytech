@@ -33,18 +33,22 @@ def gi(mu, C):
 
 identity = lambda x: x
 
-# left/right projection of product type: (a x b) -> a, (a x b) -> b
+# left/right projection of product type
+# fst: (a x b) -> a
+# snd: (a x b) -> b
 fst      = lambda t: t[0]
 snd      = lambda t: t[1]
 
 # function evaluation, useful for partial application: (a -> b) -> a -> b
+# e.g. fix x and apply f, g, h...
 app      = lambda f, x: f(x)
 
-# swap function arguments: (a -> b -> c) -> (b -> a -> c)
+# swap function arguments: (a -> b -> c) -> b -> a -> c
 flip     = lambda f, x, y: f(y, x)
 
 # project and reconstruct product type with given functions
-# (a x b) -> (a -> c) -> (b -> d) -> (c x d)
+# (a -> c) -> (b -> d) -> (a x b) -> (c x d)
+#    f     ->    g     ->    t    ->    u
 bimap    = lambda f, g, t: (f(fst(t)), g(snd(t)))
 
 # obvious helpers for bimap

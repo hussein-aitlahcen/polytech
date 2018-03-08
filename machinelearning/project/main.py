@@ -35,15 +35,21 @@ identity = lambda x: x
 
 # left/right projection of product type
 # fst: (a x b) -> a
+#         t    -> a
 # snd: (a x b) -> b
+#         t    -> b
 fst      = lambda t: t[0]
 snd      = lambda t: t[1]
 
-# function evaluation, useful for partial application: (a -> b) -> a -> b
+# function evaluation, useful for partial application
+# (a -> b) -> a -> b
+#     f    -> x -> y
 # e.g. fix x and apply f, g, h...
 app      = lambda f, x: f(x)
 
-# swap function arguments: (a -> b -> c) -> b -> a -> c
+# swap function arguments
+# (a -> b -> c) -> b -> a -> c
+#       f          x -> y -> z
 flip     = lambda f, x, y: f(y, x)
 
 # project and reconstruct product type with given functions

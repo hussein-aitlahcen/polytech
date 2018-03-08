@@ -23,7 +23,7 @@ flip     = lambda f, x, y: f(y, x)
 # project and reconstruct product type with given functions
 # (a x b) -> (a -> c) -> (b -> d) -> (c x d)
 bimap    = lambda f, g, t: (f(fst(t)), g(snd(t)))
-# obvious helper for bimap
+# obvious helpers for bimap
 left     = lambda f, t: bimap(f, identity, t)
 right    = lambda f, t: bimap(identity, f, t)
 '

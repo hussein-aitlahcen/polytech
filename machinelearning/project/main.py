@@ -24,30 +24,6 @@ from math import log
 from itertools import groupby
 from functools import partial
 from sklearn.decomposition import PCA
-
-def gi(mu, C):
-    (sign, logDetC) = np.linalg.slogdet(C)
-    invC = np.linalg.inv(C)
-    def f(X):
-        XminMu = X - mu
-        return  - (sign * logDetC) - XminMu.T @ invC @ XminMu
-    return f
-
-def race(brainMaterial, judgable, classifier):
-    (name, f) = classifier
-    (X0, y0) = f(brainMaterial)
-    (X1, y1) = f(judgable)
-    begin = time()
-    G = learn(X0, y0)
-    decisions = judge(G, X1, y1)
-    end = time()
-    elapsed = end - begin
-    error = 1 - (len([decision
-                      for decision
-                      in decisions
-                      if fst(decision) == fst(snd(decision))]) / len(decisions))
-    return name + ': elapsed=' + str(elapsed) + ', error=' + str(error)
-
 '''
   [X] = list of images
   [y] = expected classes for [X]
@@ -55,7 +31,7 @@ def race(brainMaterial, judgable, classifier):
   g = groupby fst . sortby fst
   [y], [X] -f-> [(y, X)] -g-> [(y, [X])] -> [gi(mean([X]), cov([X]))]
 '''
-learn    = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
+learn = lambda X, y: [gi(np.mean(subX, axis =0), np.cov(subX.T))
                          for (y, subX)
                          in map(partial(right, lambda x: np.array(list(map(snd, x)))),
                                 groupby(sorted(zip(y, X), key=fst), fst))]
@@ -63,18 +39,26 @@ learn    = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
   f = enumerate
   [X] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
 '''
-judge    = lambda G, X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key=snd))
+judge = lambda G, X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key =snd))
                             for ix
                             in enumerate(X)]
-
-bayesian = identity
-pca = partial(left, lambda X: PCA(n_components=10).fit_transform(X))
-
+speed = lambda f: left(lambda begin: time() - begin, (lambda begin: (begin, f()))(time()))
+gi    = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
+                              np.linalg.slogdet(C),
+                              np.linalg.inv(C))
+error = lambda decisions: 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
+race  = lambda rawSample, rawUnknown, classifier: str((fst(classifier), bimap(lambda t: "elapsed: " + str(t), lambda err: "error: " + str(err),
+                                                                              speed(lambda: (lambda data: error(judge(learn(fst(fst(data)),
+                                                                                                                            snd(fst(data))),
+                                                                                                                      fst(snd(data)),
+                                                                                                                      snd(snd(data)))))(bimap(snd(classifier),
+                                                                                                                                              snd(classifier),
+                                                                                                                                              (rawSample,
+                                                                                                                                               rawUnknown)))))))
 classifiers = [
-    ("Bayesian + Gaussian", bayesian),
-    ("PCA + Gaussian", pca)
+    ("Bayesian + Gaussian", identity),
+    ("PCA + Gaussian", partial(left, lambda X: PCA(n_components=10).fit_transform(X)))
 ]
-
 for x in map(partial(race,
                      (np.load('./data/trn_img.npy'),
                       np.load('./data/trn_lbl.npy')),

@@ -18,6 +18,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import numpy as np
+from common import *
+from time import time
 from math import log
 from itertools import groupby
 from functools import partial
@@ -31,46 +33,20 @@ def gi(mu, C):
         return  - (sign * logDetC) - XminMu.T @ invC @ XminMu
     return f
 
-identity = lambda x: x
-
-''' left/right projection of product type
-
- fst: (a x b) -> a
-         t    -> a
- snd: (a x b) -> b
-         t    -> b
-
-'''
-fst      = lambda t: t[0]
-snd      = lambda t: t[1]
-
-''' function evaluation, useful for partial application
-
- (a -> b) -> a -> b
-     f    -> x -> y
-
-'''
-app      = lambda f, x: f(x)
-
-''' swap function arguments
-
- (a -> b -> c) -> b -> a -> c
-       f       -> x -> y -> z
-
-'''
-flip     = lambda f, x, y: f(y, x)
-
-''' project and reconstruct product type with given functions
-
- (a -> c) -> (b -> d) -> (a x b) -> (c x d)
-    f     ->    g     ->    t    ->    u
-
-'''
-bimap    = lambda f, g, t: (f(fst(t)), g(snd(t)))
-
-# obvious helpers for bimap
-left     = lambda f, t: bimap(f, identity, t)
-right    = lambda f, t: bimap(identity, f, t)
+def race(brainMaterial, judgable, classifier):
+    (name, f) = classifier
+    (X0, y0) = f(brainMaterial)
+    (X1, y1) = f(judgable)
+    begin = time()
+    G = learn(X0, y0)
+    decisions = judge(G, X1, y1)
+    end = time()
+    elapsed = end - begin
+    error = 1 - (len([decision
+                      for decision
+                      in decisions
+                      if fst(decision) == fst(snd(decision))]) / len(decisions))
+    return name + ': elapsed=' + str(elapsed) + ', error=' + str(error)
 
 '''
   [X] = list of images
@@ -79,18 +55,30 @@ right    = lambda f, t: bimap(identity, f, t)
   g = groupby fst . sortby fst
   [y], [X] -f-> [(y, X)] -g-> [(y, [X])] -> [gi(mean([X]), cov([X]))]
 '''
-learn    = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T)) for (y, subX) in map(partial(right, lambda x: np.array(list(map(snd, x)))), groupby(sorted(zip(y, X), key=fst), fst))]
+learn    = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
+                         for (y, subX)
+                         in map(partial(right, lambda x: np.array(list(map(snd, x)))),
+                                groupby(sorted(zip(y, X), key=fst), fst))]
 '''
   f = enumerate
   [X] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
 '''
-judge    = lambda X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key=snd)) for ix in enumerate(X)]
+judge    = lambda G, X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key=snd))
+                            for ix
+                            in enumerate(X)]
 
-G = learn(np.load('./data/trn_img.npy'), np.load('./data/trn_lbl.npy'))
+bayesian = identity
+pca = partial(left, lambda X: PCA(n_components=10).fit_transform(X))
 
-decisions = judge(np.load('./data/dev_img.npy'), np.load('./data/dev_lbl.npy'))
+classifiers = [
+    ("Bayesian + Gaussian", bayesian),
+    ("PCA + Gaussian", pca)
+]
 
-error = 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
-
-# pourcentage d'erreur sur les jugements
-print(error)
+for x in map(partial(race,
+                     (np.load('./data/trn_img.npy'),
+                      np.load('./data/trn_lbl.npy')),
+                     (np.load('./data/dev_img.npy'),
+                      np.load('./data/dev_lbl.npy'))),
+             classifiers) :
+    print(x)

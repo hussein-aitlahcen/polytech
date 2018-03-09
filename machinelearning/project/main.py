@@ -44,9 +44,9 @@ learn = lambda X, y: [gi(np.mean(subX, axis =0), np.cov(subX.T))
   f = enumerate
   [X] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
 '''
-judge = lambda G, X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key =snd))
-                            for ix
-                            in enumerate(X)]
+judge = lambda G, X, y: [(y[i], max(map(partial(right, partial(flip, app, x)), enumerate(G)), key =snd))
+                         for (i, x)
+                         in enumerate(X)]
 '''
   Given a function f, computes the time and return a tuple of the form: (elapsed, y)
   where y = f()
@@ -57,9 +57,9 @@ speed = lambda f: left(lambda begin: time() - begin, (lambda begin: (begin, f())
 '''
 error = lambda decisions: 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
 '''
-  Execute the given classifier and returns the decisions made
+  Classify the given datas
 '''
-exec_classifier = lambda data: error(judge(learn(fst(fst(data)),
+classify = lambda data: error(judge(learn(fst(fst(data)),
                                                  snd(fst(data))),
                                            fst(snd(data)),
                                            snd(snd(data))))
@@ -67,10 +67,10 @@ exec_classifier = lambda data: error(judge(learn(fst(fst(data)),
   Execute multipe classifiers against the same set of sample, yielding their score (name, (elapsed_time, error_rate))
 '''
 race  = lambda rawSample, rawUnknown, name, transformation: (name,
-                                                             speed(lambda: exec_classifier(bimap(transformation,
-                                                                                                 transformation,
-                                                                                                 (rawSample,
-                                                                                                  rawUnknown)))))
+                                                             speed(lambda: classify(bimap(transformation,
+                                                                                          transformation,
+                                                                                          (rawSample,
+                                                                                           rawUnknown)))))
 '''
   Differents classifiers to test
 '''
@@ -81,16 +81,21 @@ classifiers = [
 
 sample = (np.load('./data/trn_img.npy'),
           np.load('./data/trn_lbl.npy'))
+
 unknown = (np.load('./data/dev_img.npy'),
            np.load('./data/dev_lbl.npy'))
 
-variations = [(variation, race(sample, unknown, fst(classifier), fst(snd(classifier))(variation)))
-              for classifier
-              in classifiers
-              for variation
-              in snd(snd(classifier))]
+result = map(partial(right, partial(map, partial(right, snd))),
+             groupby(sorted([(variation, race(sample, unknown, name, transformation(variation)))
+                             for (name, (transformation, variations))
+                             in classifiers
+                             for variation
+                             in variations],
+                            key=compose(fst, snd)),
+                     compose(fst, snd)))
 
-# (x, [(name, (time, score))])
-
-for x in variations:
-    print(str(x))
+for x in result:
+    print("############")
+    print(str(fst(x)))
+    for y in snd(x):
+        print(str(y))

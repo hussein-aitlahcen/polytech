@@ -24,6 +24,10 @@ from math import log
 from itertools import groupby
 from functools import partial
 from sklearn.decomposition import PCA
+
+gi    = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
+                              np.linalg.slogdet(C),
+                              np.linalg.inv(C))
 '''
   [X] = list of images
   [y] = expected classes for [X]
@@ -42,15 +46,25 @@ learn = lambda X, y: [gi(np.mean(subX, axis =0), np.cov(subX.T))
 judge = lambda G, X, y: [(y[fst(ix)], max(map(partial(right, partial(flip, app, snd(ix))), enumerate(G)), key =snd))
                             for ix
                             in enumerate(X)]
+'''
+  Given a function f, computes the time and return a tuple of the form: (elapsed, y)
+  where y = f()
+'''
 speed = lambda f: left(lambda begin: time() - begin, (lambda begin: (begin, f()))(time()))
-gi    = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
-                              np.linalg.slogdet(C),
-                              np.linalg.inv(C))
+'''
+  Compute the error rate
+'''
 error = lambda decisions: 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
+'''
+  Execute the given classifier and returns the decisions made
+'''
 exec_classifier = lambda data: error(judge(learn(fst(fst(data)),
                                                  snd(fst(data))),
                                            fst(snd(data)),
                                            snd(snd(data))))
+'''
+  Execute multipe classifiers against the same set of sample, yielding their score (elapsed_time, error_rate)
+'''
 race  = lambda rawSample, rawUnknown, classifier: (fst(classifier),
                                                    bimap(lambda t: "elapsed: " + str(t),
                                                          lambda e: "error: " + str(e),
@@ -58,6 +72,9 @@ race  = lambda rawSample, rawUnknown, classifier: (fst(classifier),
                                                                                              snd(classifier),
                                                                                              (rawSample,
                                                                                               rawUnknown))))))
+'''
+  Differents classifiers to test
+'''
 classifiers = [
     ("Bayesian + Gaussian", identity),
     ("PCA + Gaussian", partial(left, lambda X: PCA(n_components=10).fit_transform(X)))

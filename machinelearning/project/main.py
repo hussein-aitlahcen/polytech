@@ -47,14 +47,17 @@ gi    = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLo
                               np.linalg.slogdet(C),
                               np.linalg.inv(C))
 error = lambda decisions: 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
-race  = lambda rawSample, rawUnknown, classifier: str((fst(classifier), bimap(lambda t: "elapsed: " + str(t), lambda err: "error: " + str(err),
-                                                                              speed(lambda: (lambda data: error(judge(learn(fst(fst(data)),
-                                                                                                                            snd(fst(data))),
-                                                                                                                      fst(snd(data)),
-                                                                                                                      snd(snd(data)))))(bimap(snd(classifier),
-                                                                                                                                              snd(classifier),
-                                                                                                                                              (rawSample,
-                                                                                                                                               rawUnknown)))))))
+exec_classifier = lambda data: error(judge(learn(fst(fst(data)),
+                                                 snd(fst(data))),
+                                           fst(snd(data)),
+                                           snd(snd(data))))
+race  = lambda rawSample, rawUnknown, classifier: (fst(classifier),
+                                                   bimap(lambda t: "elapsed: " + str(t),
+                                                         lambda e: "error: " + str(e),
+                                                         speed(lambda: exec_classifier(bimap(snd(classifier),
+                                                                                             snd(classifier),
+                                                                                             (rawSample,
+                                                                                              rawUnknown))))))
 classifiers = [
     ("Bayesian + Gaussian", identity),
     ("PCA + Gaussian", partial(left, lambda X: PCA(n_components=10).fit_transform(X)))
@@ -65,4 +68,4 @@ for x in map(partial(race,
                      (np.load('./data/dev_img.npy'),
                       np.load('./data/dev_lbl.npy'))),
              classifiers) :
-    print(x)
+    print(str(x))

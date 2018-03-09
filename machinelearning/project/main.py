@@ -18,6 +18,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import numpy as np
+import matplotlib.pyplot as plot
 from common import *
 from time import time
 from math import log
@@ -63,26 +64,33 @@ exec_classifier = lambda data: error(judge(learn(fst(fst(data)),
                                            fst(snd(data)),
                                            snd(snd(data))))
 '''
-  Execute multipe classifiers against the same set of sample, yielding their score (elapsed_time, error_rate)
+  Execute multipe classifiers against the same set of sample, yielding their score (name, (elapsed_time, error_rate))
 '''
-race  = lambda rawSample, rawUnknown, classifier: (fst(classifier),
-                                                   bimap(lambda t: "elapsed: " + str(t),
-                                                         lambda e: "error: " + str(e),
-                                                         speed(lambda: exec_classifier(bimap(snd(classifier),
-                                                                                             snd(classifier),
-                                                                                             (rawSample,
-                                                                                              rawUnknown))))))
+race  = lambda rawSample, rawUnknown, name, transformation: (name,
+                                                             speed(lambda: exec_classifier(bimap(transformation,
+                                                                                                 transformation,
+                                                                                                 (rawSample,
+                                                                                                  rawUnknown)))))
 '''
   Differents classifiers to test
 '''
 classifiers = [
-    ("Bayesian + Gaussian", identity),
-    ("PCA + Gaussian", partial(left, lambda X: PCA(n_components=10).fit_transform(X)))
+    ("Bayesian + Gaussian", (lambda x: identity, [0])),
+    ("PCA + Gaussian", (lambda x: partial(left, lambda X: PCA(n_components=x).fit_transform(X)), [10, 40, 100, 200, 400]))
 ]
-for x in map(partial(race,
-                     (np.load('./data/trn_img.npy'),
-                      np.load('./data/trn_lbl.npy')),
-                     (np.load('./data/dev_img.npy'),
-                      np.load('./data/dev_lbl.npy'))),
-             classifiers) :
+
+sample = (np.load('./data/trn_img.npy'),
+          np.load('./data/trn_lbl.npy'))
+unknown = (np.load('./data/dev_img.npy'),
+           np.load('./data/dev_lbl.npy'))
+
+variations = [(variation, race(sample, unknown, fst(classifier), fst(snd(classifier))(variation)))
+              for classifier
+              in classifiers
+              for variation
+              in snd(snd(classifier))]
+
+# (x, [(name, (time, score))])
+
+for x in variations:
     print(str(x))

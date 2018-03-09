@@ -26,7 +26,7 @@ from itertools import groupby
 from functools import partial
 from sklearn.decomposition import PCA
 
-gi    = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
+gi = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
                               np.linalg.slogdet(C),
                               np.linalg.inv(C))
 '''
@@ -59,18 +59,16 @@ error = lambda decisions: 1 - (len([decision for decision in decisions if fst(de
 '''
   Classify the given datas
 '''
-classify = lambda data: error(judge(learn(fst(fst(data)),
-                                                 snd(fst(data))),
-                                           fst(snd(data)),
-                                           snd(snd(data))))
+classify = lambda sample, unknown: judge(learn(fst(sample),
+                                                snd(sample)),
+                                         fst(unknown),
+                                         snd(unknown))
 '''
-  Execute multipe classifiers against the same set of sample, yielding their score (name, (elapsed_time, error_rate))
+  Execute a classification with the given transformation applied against the set of sample, yielding the score (name, (elapsed_time, error_rate))
 '''
-race  = lambda rawSample, rawUnknown, name, transformation: (name,
-                                                             speed(lambda: classify(bimap(transformation,
-                                                                                          transformation,
-                                                                                          (rawSample,
-                                                                                           rawUnknown)))))
+race = lambda rawSample, rawUnknown, name, transformation: (name,
+                                                            speed(lambda: error(classify(transformation(rawSample),
+                                                                                         transformation(rawUnknown)))))
 '''
   Differents classifiers to test
 '''
@@ -97,5 +95,6 @@ result = map(partial(right, partial(map, partial(right, snd))),
 for x in result:
     print("############")
     print(str(fst(x)))
+    print("------------")
     for y in snd(x):
         print(str(y))

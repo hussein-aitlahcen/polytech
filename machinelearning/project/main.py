@@ -26,9 +26,8 @@ from itertools import groupby
 from functools import partial
 from sklearn.decomposition import PCA
 
-gi = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDet) * snd(sLogDet)) - XminMu.T @ invC @ XminMu)(X - mu),
-                              np.linalg.slogdet(C),
-                              np.linalg.inv(C))
+gi = lambda mu, C: (lambda sLogDet, invC: (lambda sign, logDet: lambda X: (lambda XminMu: -(sign * logDet) - XminMu.T @ invC @ XminMu)(X - mu))(fst(sLogDet), snd(sLogDet)))(np.linalg.slogdet(C), np.linalg.inv(C))
+
 '''
   [X] = list of images
   [y] = expected classes for [X]
@@ -36,7 +35,7 @@ gi = lambda mu, C: partial(lambda sLogDet, invC, X: (lambda XminMu: -(fst(sLogDe
   g = groupby fst . sortby fst
   [y], [X] -f-> [(y, X)] -g-> [(y, [X])] -> [gi(mean([X]), cov([X]))]
 '''
-learn = lambda X, y: [gi(np.mean(subX, axis =0), np.cov(subX.T))
+learn = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
                          for (y, subX)
                          in map(partial(right, lambda x: np.array(list(map(snd, x)))),
                                 groupby(sorted(zip(y, X), key=fst), fst))]
@@ -55,14 +54,11 @@ speed = lambda f: left(lambda begin: time() - begin, (lambda begin: (begin, f())
 '''
   Compute the error rate
 '''
-error = lambda decisions: 1 - (len([decision for decision in decisions if fst(decision) == fst(snd(decision))]) / len(decisions))
+error = lambda decisions: 1 - (len([1 for (expected, (computed, _)) in decisions if expected == computed]) / len(decisions))
 '''
   Classify the given datas
 '''
-classify = lambda sample, unknown: judge(learn(fst(sample),
-                                                snd(sample)),
-                                         fst(unknown),
-                                         snd(unknown))
+classify = lambda sample, unknown: (lambda X0, y0, X1, y1: judge(learn(X0, y0), X1, y1))(fst(sample), snd(sample), fst(unknown), snd(unknown))
 '''
   Execute a classification with the given transformation applied against the set of sample, yielding the score (name, (elapsed_time, error_rate))
 '''
@@ -73,16 +69,13 @@ race = lambda rawSample, rawUnknown, name, transformation: (name,
   Differents classifiers to test
 '''
 classifiers = [
-    ("Bayesian + Gaussian", (lambda x: identity, [0])),
-    ("PCA + Gaussian", (lambda x: partial(left, lambda X: PCA(n_components=x).fit_transform(X)), [10, 40, 100, 200, 400]))
+    ("Bayesian + Gaussian", (const(identity), [0])),
+    ("PCA + Gaussian", (lambda x: partial(left, PCA(n_components=x).fit_transform), [10, 40, 100, 200, 400]))
 ]
-
 sample = (np.load('./data/trn_img.npy'),
           np.load('./data/trn_lbl.npy'))
-
 unknown = (np.load('./data/dev_img.npy'),
            np.load('./data/dev_lbl.npy'))
-
 result = map(partial(right, partial(map, partial(right, snd))),
              groupby(sorted([(variation, race(sample, unknown, name, transformation(variation)))
                              for (name, (transformation, variations))
@@ -91,7 +84,6 @@ result = map(partial(right, partial(map, partial(right, snd))),
                              in variations],
                             key=compose(fst, snd)),
                      compose(fst, snd)))
-
 for x in result:
     print("############")
     print(str(fst(x)))

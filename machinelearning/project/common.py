@@ -67,3 +67,5 @@ chain = lambda fs: reduce(compose, fs, identity)
 # function composition
 compose = lambda g, f: lambda x: g(f(x))
 
+# constant function
+const = lambda x: lambda y: x

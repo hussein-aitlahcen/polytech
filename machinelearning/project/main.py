@@ -43,11 +43,11 @@ learn = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
   f = enumerate
   [X] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
 '''
-judge = lambda G, X, y: [(y[i], max(map(partial(right, partial(flip, app, x)), enumerate(G)), key =snd))
+judge = lambda G, X, y: [(y[i], max(map(partial(right, partial(flip, app, x)), enumerate(G)), key=snd))
                          for (i, x)
                          in enumerate(X)]
 '''
-  Given a function f, computes the time and return a tuple of the form: (elapsed, y)
+  Given a function f, computes the execution time and return a tuple of the form: (elapsed, y)
   where y = f()
 '''
 speed = lambda f: left(lambda begin: time() - begin, (lambda begin: (begin, f()))(time()))
@@ -62,16 +62,15 @@ classify = lambda sample, unknown: (lambda X0, y0, X1, y1: judge(learn(X0, y0), 
 '''
   Execute a classification with the given transformation applied against the set of sample, yielding the score (name, (elapsed_time, error_rate))
 '''
-race = lambda rawSample, rawUnknown, name, transformation: (name,
-                                                            speed(lambda: error(classify(transformation(rawSample),
-                                                                                         transformation(rawUnknown)))))
+race = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: (lambda transformed: error(classify(fst(transformed), snd(transformed))))(transformation((rawSample, rawUnknown)))))
 '''
   Differents classifiers to test
 '''
 classifiers = [
     ("Bayesian + Gaussian", (const(identity), [0])),
-    ("PCA + Gaussian", (lambda x: partial(left, PCA(n_components=x).fit_transform), [10, 40, 100, 200, 400]))
+    ("PCA + Gaussian", (lambda x: lambda io: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(fst(fst(io)))), [10, 40, 100, 200, 400, 600]))
 ]
+
 sample = (np.load('./data/trn_img.npy'),
           np.load('./data/trn_lbl.npy'))
 unknown = (np.load('./data/dev_img.npy'),

@@ -67,23 +67,25 @@ race = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: 
   Differents classifiers to test
 '''
 classifiers = [
-    ("Bayesian + Gaussian", (const(identity), [0])),
-    ("PCA + Gaussian", (lambda x: lambda io: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(fst(fst(io)))), [10, 40, 100, 200, 400, 600]))
+    # ("Bayesian + Gaussian", (const(identity), [0])),
+    ("PCA + Gaussian", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(X0)))(fst(fst(io))), range(40, 60)))
 ]
 
 sample = (np.load('./data/trn_img.npy'),
           np.load('./data/trn_lbl.npy'))
 unknown = (np.load('./data/dev_img.npy'),
            np.load('./data/dev_lbl.npy'))
-result = map(partial(right, partial(map, partial(right, snd))),
-             groupby(sorted([(variation, race(sample, unknown, name, transformation(variation)))
-                             for (name, (transformation, variations))
-                             in classifiers
-                             for variation
-                             in variations],
-                            key=compose(fst, snd)),
-                     compose(fst, snd)))
-for x in result:
+result = speed(lambda: map(partial(right, partial(map, partial(right, snd))),
+                           groupby(sorted([(variation, race(sample, unknown, name, transformation(variation)))
+                                           for (name, (transformation, variations))
+                                           in classifiers
+                                           for variation
+                                           in variations],
+                                          key=compose(fst, snd)),
+                           compose(fst, snd))))
+print("################")
+print("total time: " + str(fst(result)))
+for x in snd(result):
     print("############")
     print(str(fst(x)))
     print("------------")

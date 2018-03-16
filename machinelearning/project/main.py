@@ -25,6 +25,7 @@ from math import log
 from itertools import groupby
 from functools import partial
 from sklearn.decomposition import PCA
+from sklearn import preprocessing, svm
 
 gi = lambda mu, C: (lambda sLogDet, invC: (lambda sign, logDet: lambda X: (lambda XminMu: -(sign * logDet) - XminMu.T @ invC @ XminMu)(X - mu))(fst(sLogDet), snd(sLogDet)))(np.linalg.slogdet(C), np.linalg.inv(C))
 
@@ -36,12 +37,12 @@ gi = lambda mu, C: (lambda sLogDet, invC: (lambda sign, logDet: lambda X: (lambd
   [y], [X] -f-> [(y, X)] -g-> [(y, [X])] -> [gi(mean([X]), cov([X]))]
 '''
 learn = lambda X, y: [gi(np.mean(subX, axis=0), np.cov(subX.T))
-                         for (y, subX)
-                         in map(partial(right, lambda x: np.array(list(map(snd, x)))),
-                                groupby(sorted(zip(y, X), key=fst), fst))]
+                      for (y, subX)
+                      in map(partial(right, lambda x: np.array(list(map(snd, x)))),
+                             groupby(sorted(zip(y, X), key=fst), fst))]
 '''
   f = enumerate
-  [X] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
+  [g], [X], [y] -f-> [(i, X)] -> [(y[i], max(gi(X)))]
 '''
 judge = lambda G, X, y: [(y[i], max(map(partial(right, partial(flip, app, x)), enumerate(G)), key=snd))
                          for (i, x)
@@ -62,22 +63,25 @@ classify = lambda sample, unknown: (lambda X0, y0, X1, y1: judge(learn(X0, y0), 
 '''
   Execute a classification with the given transformation applied against the set of sample, yielding the score (name, (elapsed_time, error_rate))
 '''
-race = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: (lambda transformed: error(classify(fst(transformed), snd(transformed))))(transformation((rawSample, rawUnknown)))))
+bayesian = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: (lambda transformed: error(classify(fst(transformed), snd(transformed))))(transformation((rawSample, rawUnknown)))))
+
+vector = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: error(list(map(lambda t: (snd(rawUnknown)[fst(t)], (snd(t), 0)), enumerate(svm.SVC().fit(fst(rawSample), snd(rawSample)).predict(fst(rawUnknown))))))))
 '''
   Differents classifiers to test
 '''
 classifiers = [
-    # ("Bayesian + Gaussian", (const(identity), [0])),
-    ("PCA + Gaussian", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(X0)))(fst(fst(io))), range(40, 60)))
+    # ("Bayesian + Gaussian", (const(identity), (bayesian, [0]))),
+    # ("PCA + Bayesian + Gaussian", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (bayesian, range(49, 52))))
+    ("SVM", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(compose(preprocessing.scale, partial(left, fittedPCA.transform))))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (vector, range(50, 51))))
 ]
 
-sample = (np.load('./data/trn_img.npy'),
-          np.load('./data/trn_lbl.npy'))
-unknown = (np.load('./data/dev_img.npy'),
-           np.load('./data/dev_lbl.npy'))
+sample = (np.load('./data/trn_img.npy')[:4000],
+          np.load('./data/trn_lbl.npy')[:4000])
+unknown = (np.load('./data/dev_img.npy')[:4000],
+           np.load('./data/dev_lbl.npy')[:4000])
 result = speed(lambda: map(partial(right, partial(map, partial(right, snd))),
-                           groupby(sorted([(variation, race(sample, unknown, name, transformation(variation)))
-                                           for (name, (transformation, variations))
+                           groupby(sorted([(variation, f(sample, unknown, name, transformation(variation)))
+                                           for (name, (transformation, (f, variations)))
                                            in classifiers
                                            for variation
                                            in variations],

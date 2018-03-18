@@ -24,8 +24,9 @@ from time import time
 from math import log
 from itertools import groupby
 from functools import partial
-from sklearn.decomposition import PCA
 from sklearn import preprocessing, svm
+from sklearn.decomposition import PCA
+from sklearn.metrics import confusion_matrix
 
 gi = lambda mu, C: (lambda sLogDet, invC: (lambda sign, logDet: lambda X: (lambda XminMu: -(sign * logDet) - XminMu.T @ invC @ XminMu)(X - mu))(fst(sLogDet), snd(sLogDet)))(np.linalg.slogdet(C), np.linalg.inv(C))
 
@@ -63,7 +64,7 @@ classify = lambda sample, unknown: (lambda X0, y0, X1, y1: judge(learn(X0, y0), 
 '''
   Execute a classification with the given transformation applied against the set of sample, yielding the score (name, (elapsed_time, error_rate))
 '''
-bayesian = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: (lambda transformed: error(classify(fst(transformed), snd(transformed))))(transformation((rawSample, rawUnknown)))))
+bayesian = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: (lambda transformed: classify(fst(transformed), snd(transformed)))(transformation((rawSample, rawUnknown)))))
 
 vector = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda: error(list(map(lambda t: (snd(rawUnknown)[fst(t)], (snd(t), 0)), enumerate(svm.SVC().fit(fst(rawSample), snd(rawSample)).predict(fst(rawUnknown))))))))
 '''
@@ -71,14 +72,14 @@ vector = lambda rawSample, rawUnknown, name, transformation: (name, speed(lambda
 '''
 classifiers = [
     # ("Bayesian + Gaussian", (const(identity), (bayesian, [0]))),
-    # ("PCA + Bayesian + Gaussian", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, fittedPCA.transform)))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (bayesian, range(49, 52))))
-    ("SVM", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(compose(preprocessing.scale, partial(left, fittedPCA.transform))))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (vector, range(50, 51))))
+    ("PCA + Bayesian + Gaussian", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(partial(left, compose(preprocessing.scale, fittedPCA.transform))))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (bayesian, range(50, 51))))
+    # ("SVM", (lambda x: lambda io: (lambda X0: (lambda fittedPCA: (lambda pipe: bimap(pipe, pipe, io))(compose(preprocessing.scale, partial(left, fittedPCA.transform))))(PCA(n_components=x).fit(X0)))(fst(fst(io))), (vector, range(50, 51))))
 ]
+sample = (np.load('./data/trn_img.npy'),
+          np.load('./data/trn_lbl.npy'))
+unknown = (np.load('./data/dev_img.npy'),
+           np.load('./data/dev_lbl.npy'))
 
-sample = (np.load('./data/trn_img.npy')[:4000],
-          np.load('./data/trn_lbl.npy')[:4000])
-unknown = (np.load('./data/dev_img.npy')[:4000],
-           np.load('./data/dev_lbl.npy')[:4000])
 result = speed(lambda: map(partial(right, partial(map, partial(right, snd))),
                            groupby(sorted([(variation, f(sample, unknown, name, transformation(variation)))
                                            for (name, (transformation, (f, variations)))
@@ -94,4 +95,7 @@ for x in snd(result):
     print(str(fst(x)))
     print("------------")
     for y in snd(x):
-        print(str(y))
+        print("confusion matrix:")
+        computed = list(map(compose(fst, snd), snd(snd(y))))
+        expected = list(map(fst, snd(snd(y))))
+        print(confusion_matrix(expected, computed))

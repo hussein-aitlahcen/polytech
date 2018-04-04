@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="revisions">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="revision">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="1" >
+                            <xs:element name="comment"         type="xs:string"/>
+                            <!-- TODO: mix type string/1children(number of words needed btw) -->
+                            <xs:element name="before"          type="xs:string"/>
+                            <xs:element name="after"           type="xs:string"/>
+                            <!---->
+                        </xs:sequence>
+                        <xs:attribute name="page_id"       type="xs:integer"/>
+                        <xs:attribute name="before_mod_id" type="xs:integer"/>
+                        <xs:attribute name="after_mod_id"  type="xs:integer"/>
+                        <xs:attribute name="user_id"       type="xs:integer"/>
+                        <xs:attribute name="user_num_mod"  type="xs:integer"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

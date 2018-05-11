@@ -7,10 +7,20 @@
                     <xs:complexType>
                         <xs:sequence minOccurs="1" maxOccurs="1" >
                             <xs:element name="comment"         type="xs:string"/>
-                            <!-- TODO: mix type string/1children(number of words needed btw) -->
-                            <xs:element name="before"          type="xs:string"/>
-                            <xs:element name="after"           type="xs:string"/>
-                            <!---->
+                            <xs:element name="before">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="old"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="after">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="new"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
                         <xs:attribute name="page_id"       type="xs:integer"/>
                         <xs:attribute name="before_mod_id" type="xs:integer"/>

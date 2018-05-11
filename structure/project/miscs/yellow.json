@@ -1,0 +1,401 @@
+[{
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "46fed844c5fbc2d94adfedbc9964a1c55428019c",
+    "fields": {
+        "janv_11": 1984.0,
+        "juin_11": 2148.0,
+        "mai_11": 2251.0,
+        "aout_11": 1342.0,
+        "sept_11": 1602.0,
+        "dec_11": 2180.0,
+        "oct_11": 2175.0,
+        "nov_11": 2174.0,
+        "granularite": 75006,
+        "fevr_11": 1872.0,
+        "total_arrondissement_2011": 23891.0,
+        "avr_11": 2070.0,
+        "juil_11": 1858.0,
+        "mars_11": 2235.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "9e3194830b848a34b9375dbcd8e4805264b84acb",
+    "fields": {
+        "janv_11": 2291.0,
+        "juin_11": 2241.0,
+        "mai_11": 2341.0,
+        "aout_11": 1518.0,
+        "sept_11": 2263.0,
+        "dec_11": 2267.0,
+        "oct_11": 2270.0,
+        "nov_11": 2207.0,
+        "granularite": 75007,
+        "fevr_11": 1925.0,
+        "total_arrondissement_2011": 25705.0,
+        "avr_11": 2084.0,
+        "juil_11": 2015.0,
+        "mars_11": 2283.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "6105161d1879e0d3355b792cb8e7e8cf98c25868",
+    "fields": {
+        "janv_11": 3251.0,
+        "juin_11": 3117.0,
+        "mai_11": 3266.0,
+        "aout_11": 2344.0,
+        "sept_11": 3116.0,
+        "dec_11": 3286.0,
+        "oct_11": 3220.0,
+        "nov_11": 3061.0,
+        "granularite": 75009,
+        "fevr_11": 2813.0,
+        "total_arrondissement_2011": 36675.0,
+        "avr_11": 2992.0,
+        "juil_11": 2950.0,
+        "mars_11": 3259.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "30c718df0cd059584919f1938ae9ba7d4e628560",
+    "fields": {
+        "janv_11": 1850.0,
+        "juin_11": 1764.0,
+        "mai_11": 1861.0,
+        "aout_11": 1344.0,
+        "sept_11": 1791.0,
+        "dec_11": 1781.0,
+        "oct_11": 1822.0,
+        "nov_11": 1722.0,
+        "granularite": 75002,
+        "fevr_11": 1658.0,
+        "total_arrondissement_2011": 20967.0,
+        "avr_11": 1777.0,
+        "juil_11": 1717.0,
+        "mars_11": 1880.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "45c0d166cea0f9c5273f5a1dc1619c00d150eb69",
+    "fields": {
+        "janv_11": 3496.0,
+        "juin_11": 3413.0,
+        "mai_11": 3506.0,
+        "aout_11": 2804.0,
+        "sept_11": 3398.0,
+        "dec_11": 3418.0,
+        "oct_11": 3451.0,
+        "nov_11": 3297.0,
+        "granularite": 75010,
+        "fevr_11": 3065.0,
+        "total_arrondissement_2011": 39867.0,
+        "avr_11": 3307.0,
+        "juil_11": 3225.0,
+        "mars_11": 3487.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "d8797a5c7bbba6b0fa2b484fc25925292aab5c23",
+    "fields": {
+        "janv_11": 3850.0,
+        "juin_11": 3294.0,
+        "mai_11": 3849.0,
+        "aout_11": 3146.0,
+        "sept_11": 3716.0,
+        "dec_11": 3765.0,
+        "oct_11": 3786.0,
+        "nov_11": 3621.0,
+        "granularite": 75012,
+        "fevr_11": 3352.0,
+        "total_arrondissement_2011": 43189.0,
+        "avr_11": 3595.0,
+        "juil_11": 3373.0,
+        "mars_11": 3842.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "e5bea9a36bc39ed83983315f1c94de3a3ad8bd78",
+    "fields": {
+        "janv_11": 3864.0,
+        "juin_11": 3707.0,
+        "mai_11": 3750.0,
+        "aout_11": 2960.0,
+        "sept_11": 3658.0,
+        "dec_11": 3891.0,
+        "oct_11": 3810.0,
+        "nov_11": 3738.0,
+        "granularite": 75014,
+        "fevr_11": 3392.0,
+        "total_arrondissement_2011": 43761.0,
+        "avr_11": 3671.0,
+        "juil_11": 3455.0,
+        "mars_11": 3865.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "f5256efaeba7ad9a5965004b271c1ee9cdba69a6",
+    "fields": {
+        "janv_11": 5154.0,
+        "juin_11": 5164.0,
+        "mai_11": 5273.0,
+        "aout_11": 4520.0,
+        "sept_11": 5146.0,
+        "dec_11": 5129.0,
+        "oct_11": 5203.0,
+        "nov_11": 4989.0,
+        "granularite": 75019,
+        "fevr_11": 4587.0,
+        "total_arrondissement_2011": 60430.0,
+        "avr_11": 5157.0,
+        "juil_11": 4910.0,
+        "mars_11": 5198.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "040ca66b79b1058cc612302c67451a4309488ec7",
+    "fields": {
+        "janv_11": 1552.0,
+        "juin_11": 1603.0,
+        "mai_11": 1628.0,
+        "aout_11": 1215.0,
+        "sept_11": 1538.0,
+        "dec_11": 1545.0,
+        "oct_11": 1585.0,
+        "nov_11": 1485.0,
+        "granularite": 75004,
+        "fevr_11": 1334.0,
+        "total_arrondissement_2011": 18068.0,
+        "avr_11": 1528.0,
+        "juil_11": 1485.0,
+        "mars_11": 1570.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "8ea81ed8a9f1a688b5f7d52552923d3a716b8746",
+    "fields": {
+        "janv_11": 4936.0,
+        "juin_11": 4800.0,
+        "mai_11": 4910.0,
+        "aout_11": 3869.0,
+        "sept_11": 4780.0,
+        "dec_11": 4751.0,
+        "oct_11": 4875.0,
+        "nov_11": 4654.0,
+        "granularite": 75011,
+        "fevr_11": 4360.0,
+        "total_arrondissement_2011": 56184.0,
+        "avr_11": 4740.0,
+        "juil_11": 4517.0,
+        "mars_11": 4992.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "fc6f9c7e93344752bc67f9c26f95bb08d004396d",
+    "fields": {
+        "janv_11": 5549.0,
+        "juin_11": 5465.0,
+        "mai_11": 5537.0,
+        "aout_11": 4816.0,
+        "sept_11": 5402.0,
+        "dec_11": 5469.0,
+        "oct_11": 5578.0,
+        "nov_11": 5273.0,
+        "granularite": 75018,
+        "fevr_11": 4814.0,
+        "total_arrondissement_2011": 63854.0,
+        "avr_11": 5297.0,
+        "juil_11": 5177.0,
+        "mars_11": 5477.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "9a375962eb48032402d6991d69810f292e36f3cb",
+    "fields": {
+        "janv_11": 4775.0,
+        "juin_11": 4659.0,
+        "mai_11": 4511.0,
+        "aout_11": 4021.0,
+        "sept_11": 4619.0,
+        "dec_11": 4706.0,
+        "oct_11": 4695.0,
+        "nov_11": 4627.0,
+        "granularite": 75020,
+        "fevr_11": 4207.0,
+        "total_arrondissement_2011": 54597.0,
+        "avr_11": 4667.0,
+        "juil_11": 4342.0,
+        "mars_11": 4768.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "100f68fa9d5e53c6073429ccbb257f58c60d28f6",
+    "fields": {
+        "janv_11": 1779.0,
+        "juin_11": 1858.0,
+        "mai_11": 1857.0,
+        "aout_11": 1434.0,
+        "sept_11": 1805.0,
+        "dec_11": 1840.0,
+        "oct_11": 1876.0,
+        "nov_11": 1744.0,
+        "granularite": 75001,
+        "fevr_11": 1547.0,
+        "total_arrondissement_2011": 21175.0,
+        "avr_11": 1771.0,
+        "juil_11": 1825.0,
+        "mars_11": 1839.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "7e73b2c4f4632f95974b7ac922d4acdd2d5c36b4",
+    "fields": {
+        "janv_11": 1489.0,
+        "juin_11": 1436.0,
+        "mai_11": 1486.0,
+        "aout_11": 1085.0,
+        "sept_11": 1452.0,
+        "dec_11": 1435.0,
+        "oct_11": 1471.0,
+        "nov_11": 1399.0,
+        "granularite": 75003,
+        "fevr_11": 1281.0,
+        "total_arrondissement_2011": 16733.0,
+        "avr_11": 1365.0,
+        "juil_11": 1352.0,
+        "mars_11": 1482.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "7737fd181de188e606aa1727a58e34dc26101fcb",
+    "fields": {
+        "janv_11": 4110.0,
+        "juin_11": 3843.0,
+        "mai_11": 3596.0,
+        "aout_11": 2798.0,
+        "sept_11": 3971.0,
+        "dec_11": 3917.0,
+        "oct_11": 4083.0,
+        "nov_11": 3703.0,
+        "granularite": 75008,
+        "fevr_11": 3655.0,
+        "total_arrondissement_2011": 45002.0,
+        "avr_11": 3885.0,
+        "juil_11": 3317.0,
+        "mars_11": 4124.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "c2bd4d3ac9f189db74e69e1c350fa3e6844a0f40",
+    "fields": {
+        "janv_11": 4731.0,
+        "juin_11": 4545.0,
+        "mai_11": 4685.0,
+        "aout_11": 3869.0,
+        "sept_11": 4580.0,
+        "dec_11": 4667.0,
+        "oct_11": 4674.0,
+        "nov_11": 4527.0,
+        "granularite": 75013,
+        "fevr_11": 4097.0,
+        "total_arrondissement_2011": 53709.0,
+        "avr_11": 4421.0,
+        "juil_11": 4250.0,
+        "mars_11": 4663.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "6fabc948d0cc8baa0f29c7814993ab88f7552712",
+    "fields": {
+        "janv_11": 5964.0,
+        "juin_11": 5646.0,
+        "mai_11": 5857.0,
+        "aout_11": 4260.0,
+        "sept_11": 5651.0,
+        "dec_11": 5791.0,
+        "oct_11": 5760.0,
+        "nov_11": 5609.0,
+        "granularite": 75015,
+        "fevr_11": 5081.0,
+        "total_arrondissement_2011": 65937.0,
+        "avr_11": 5414.0,
+        "juil_11": 5043.0,
+        "mars_11": 5861.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "c27200c0c958306e0e96ec8e9e2618b0b546b124",
+    "fields": {
+        "janv_11": 5381.0,
+        "juin_11": 5322.0,
+        "mai_11": 5500.0,
+        "aout_11": 3554.0,
+        "sept_11": 5369.0,
+        "dec_11": 5511.0,
+        "oct_11": 5381.0,
+        "nov_11": 5253.0,
+        "granularite": 75016,
+        "fevr_11": 4648.0,
+        "total_arrondissement_2011": 61213.0,
+        "avr_11": 5019.0,
+        "juil_11": 4774.0,
+        "mars_11": 5501.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "a3998caa7b59cce965baacce3ab6f96b0b86f931",
+    "fields": {
+        "janv_11": 5419.0,
+        "juin_11": 4820.0,
+        "mai_11": 4656.0,
+        "aout_11": 3824.0,
+        "sept_11": 5090.0,
+        "dec_11": 4750.0,
+        "oct_11": 5135.0,
+        "nov_11": 5013.0,
+        "granularite": 75017,
+        "fevr_11": 4574.0,
+        "total_arrondissement_2011": 58073.0,
+        "avr_11": 4729.0,
+        "juil_11": 4785.0,
+        "mars_11": 5278.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_verts",
+    "recordid": "c31a685ce7eabcb140fc761d763ba18c69298f01",
+    "fields": {
+        "janv_11": 2178.0,
+        "juin_11": 2213.0,
+        "mai_11": 2079.0,
+        "aout_11": 1533.0,
+        "sept_11": 1789.0,
+        "dec_11": 2135.0,
+        "oct_11": 2156.0,
+        "nov_11": 2086.0,
+        "granularite": 75005,
+        "fevr_11": 1855.0,
+        "total_arrondissement_2011": 24369.0,
+        "avr_11": 2095.0,
+        "juil_11": 2021.0,
+        "mars_11": 2229.0
+    },
+    "record_timestamp": "2016-08-27T18:20:14+02:00"
+}]

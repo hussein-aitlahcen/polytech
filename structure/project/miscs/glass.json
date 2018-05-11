@@ -1,0 +1,401 @@
+[{
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "5d050a48eeb9402051e928248e5c95edcfe3d4d7",
+    "fields": {
+        "janv_11": 233.8,
+        "juin_11": 218.8,
+        "mai_11": 259.7,
+        "aout_11": 179.8,
+        "sept_11": 210.7,
+        "dec_11": 235.9,
+        "oct_11": 219.5,
+        "nov_11": 270.0,
+        "granularite": 75010,
+        "fevr_11": 219.6,
+        "total_arrondissement_2011": 2724.6,
+        "avr_11": 207.6,
+        "juil_11": 203.8,
+        "mars_11": 265.4
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "71913199e090198343b0ef3a695854263f97047d",
+    "fields": {
+        "janv_11": 595.8,
+        "juin_11": 518.4,
+        "mai_11": 592.1,
+        "aout_11": 395.9,
+        "sept_11": 470.0,
+        "dec_11": 545.1,
+        "oct_11": 540.6,
+        "nov_11": 573.4,
+        "granularite": 75015,
+        "fevr_11": 516.9,
+        "total_arrondissement_2011": 6242.6,
+        "avr_11": 463.1,
+        "juil_11": 457.0,
+        "mars_11": 574.3
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "daee55ec13720b19d03e6647a5ad69b2c8af359a",
+    "fields": {
+        "janv_11": 365.5,
+        "juin_11": 323.1,
+        "mai_11": 335.2,
+        "aout_11": 261.6,
+        "sept_11": 274.3,
+        "dec_11": 318.0,
+        "oct_11": 314.8,
+        "nov_11": 336.6,
+        "granularite": 75020,
+        "fevr_11": 294.9,
+        "total_arrondissement_2011": 3713.1,
+        "avr_11": 282.7,
+        "juil_11": 266.3,
+        "mars_11": 340.1
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "2fb7a621a56309c96c1fe1e0e0dd33739db37316",
+    "fields": {
+        "janv_11": 395.9,
+        "juin_11": 408.3,
+        "mai_11": 408.2,
+        "aout_11": 252.4,
+        "sept_11": 425.1,
+        "dec_11": 429.8,
+        "oct_11": 416.8,
+        "nov_11": 392.3,
+        "granularite": 75008,
+        "fevr_11": 315.5,
+        "total_arrondissement_2011": 4487.0,
+        "avr_11": 332.3,
+        "juil_11": 348.9,
+        "mars_11": 361.5
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "61add71c3d58741ad0f92bad558a13b29a46453b",
+    "fields": {
+        "janv_11": 334.8,
+        "juin_11": 300.0,
+        "mai_11": 314.0,
+        "aout_11": 218.1,
+        "sept_11": 315.0,
+        "dec_11": 323.0,
+        "oct_11": 313.0,
+        "nov_11": 314.0,
+        "granularite": 75012,
+        "fevr_11": 304.1,
+        "total_arrondissement_2011": 3692.0,
+        "avr_11": 331.0,
+        "juil_11": 311.0,
+        "mars_11": 314.0
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "56149d5f8711f146856878858d077e7575577b58",
+    "fields": {
+        "janv_11": 493.8,
+        "juin_11": 458.3,
+        "mai_11": 480.2,
+        "aout_11": 257.6,
+        "sept_11": 432.9,
+        "dec_11": 504.6,
+        "oct_11": 446.8,
+        "nov_11": 416.3,
+        "granularite": 75016,
+        "fevr_11": 407.9,
+        "total_arrondissement_2011": 5141.7,
+        "avr_11": 401.8,
+        "juil_11": 377.7,
+        "mars_11": 463.8
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "39d7c83bc1e8d66981143cfed79e8ea2ed248129",
+    "fields": {
+        "janv_11": 298.7,
+        "juin_11": 275.7,
+        "mai_11": 292.3,
+        "aout_11": 216.1,
+        "sept_11": 239.6,
+        "dec_11": 258.2,
+        "oct_11": 265.7,
+        "nov_11": 279.0,
+        "granularite": 75019,
+        "fevr_11": 172.4,
+        "total_arrondissement_2011": 3016.8,
+        "avr_11": 233.3,
+        "juil_11": 218.9,
+        "mars_11": 266.9
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "1b094c1d64bf3e3344e59cacf84ac17186ee4546",
+    "fields": {
+        "janv_11": 132.4,
+        "juin_11": 139.7,
+        "mai_11": 144.6,
+        "aout_11": 90.8,
+        "sept_11": 149.5,
+        "dec_11": 159.2,
+        "oct_11": 145.4,
+        "nov_11": 140.5,
+        "granularite": 75001,
+        "fevr_11": 122.2,
+        "total_arrondissement_2011": 1630.2,
+        "avr_11": 132.4,
+        "juil_11": 123.5,
+        "mars_11": 150.0
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "b7514b2d9b80317f7aff74463bbd17051a20d3a1",
+    "fields": {
+        "janv_11": 186.5,
+        "juin_11": 198.8,
+        "mai_11": 196.2,
+        "aout_11": 137.7,
+        "sept_11": 194.0,
+        "dec_11": 207.6,
+        "oct_11": 204.0,
+        "nov_11": 215.3,
+        "granularite": 75006,
+        "fevr_11": 173.3,
+        "total_arrondissement_2011": 2284.3,
+        "avr_11": 182.5,
+        "juil_11": 182.0,
+        "mars_11": 206.4
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "cf14bc98959436ddcd4a1ac596218095ea153908",
+    "fields": {
+        "janv_11": 433.0,
+        "juin_11": 427.3,
+        "mai_11": 421.6,
+        "aout_11": 330.6,
+        "sept_11": 384.3,
+        "dec_11": 428.7,
+        "oct_11": 404.2,
+        "nov_11": 431.3,
+        "granularite": 75018,
+        "fevr_11": 381.0,
+        "total_arrondissement_2011": 4839.1,
+        "avr_11": 379.5,
+        "juil_11": 364.8,
+        "mars_11": 452.8
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "73c914143e3403f2e63ae04fd17896c1dbbc559d",
+    "fields": {
+        "janv_11": 130.5,
+        "juin_11": 140.5,
+        "mai_11": 137.3,
+        "aout_11": 84.1,
+        "sept_11": 144.2,
+        "dec_11": 158.2,
+        "oct_11": 138.8,
+        "nov_11": 132.5,
+        "granularite": 75002,
+        "fevr_11": 121.0,
+        "total_arrondissement_2011": 1568.4,
+        "avr_11": 124.1,
+        "juil_11": 115.5,
+        "mars_11": 141.7
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "e79725a925dbd023b451c5f48e33e0387ae7ccd2",
+    "fields": {
+        "janv_11": 130.6,
+        "juin_11": 120.9,
+        "mai_11": 143.0,
+        "aout_11": 93.7,
+        "sept_11": 120.2,
+        "dec_11": 124.3,
+        "oct_11": 120.1,
+        "nov_11": 130.9,
+        "granularite": 75003,
+        "fevr_11": 120.0,
+        "total_arrondissement_2011": 1466.1,
+        "avr_11": 114.7,
+        "juil_11": 104.2,
+        "mars_11": 143.5
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "4940141bc34eae9f23670af2b48e26fd923572bd",
+    "fields": {
+        "janv_11": 116.9,
+        "juin_11": 134.1,
+        "mai_11": 106.8,
+        "aout_11": 83.6,
+        "sept_11": 121.2,
+        "dec_11": 137.4,
+        "oct_11": 117.9,
+        "nov_11": 113.0,
+        "granularite": 75004,
+        "fevr_11": 103.3,
+        "total_arrondissement_2011": 1371.3,
+        "avr_11": 108.8,
+        "juil_11": 105.1,
+        "mars_11": 123.2
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "4c8a9a1a8d0e9f5a77200e1e3e9ec4d089c73919",
+    "fields": {
+        "janv_11": 190.1,
+        "juin_11": 211.2,
+        "mai_11": 181.6,
+        "aout_11": 116.2,
+        "sept_11": 188.1,
+        "dec_11": 214.3,
+        "oct_11": 186.1,
+        "nov_11": 175.6,
+        "granularite": 75005,
+        "fevr_11": 164.7,
+        "total_arrondissement_2011": 2154.3,
+        "avr_11": 169.4,
+        "juil_11": 155.7,
+        "mars_11": 201.3
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "0d4053125170fa9625c207371b428ab0073d79f7",
+    "fields": {
+        "janv_11": 214.2,
+        "juin_11": 230.1,
+        "mai_11": 208.5,
+        "aout_11": 158.4,
+        "sept_11": 199.9,
+        "dec_11": 226.9,
+        "oct_11": 209.5,
+        "nov_11": 242.8,
+        "granularite": 75009,
+        "fevr_11": 195.3,
+        "total_arrondissement_2011": 2497.6,
+        "avr_11": 195.0,
+        "juil_11": 183.3,
+        "mars_11": 233.7
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "48f7c92f252cb59a051d20e66965a4319c3d8ed4",
+    "fields": {
+        "janv_11": 408.8,
+        "juin_11": 342.7,
+        "mai_11": 400.6,
+        "aout_11": 259.1,
+        "sept_11": 361.9,
+        "dec_11": 387.8,
+        "oct_11": 342.8,
+        "nov_11": 379.7,
+        "granularite": 75011,
+        "fevr_11": 363.3,
+        "total_arrondissement_2011": 4322.9,
+        "avr_11": 363.7,
+        "juil_11": 329.6,
+        "mars_11": 382.9
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "189c170ef95c239618acd8d3a70d75bf83d46f81",
+    "fields": {
+        "janv_11": 315.1,
+        "juin_11": 305.2,
+        "mai_11": 299.5,
+        "aout_11": 207.2,
+        "sept_11": 317.0,
+        "dec_11": 383.7,
+        "oct_11": 277.4,
+        "nov_11": 292.3,
+        "granularite": 75013,
+        "fevr_11": 294.7,
+        "total_arrondissement_2011": 3592.6,
+        "avr_11": 283.4,
+        "juil_11": 285.5,
+        "mars_11": 331.6
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "166e37242ebf8ab492d2cef310c898885ce44b65",
+    "fields": {
+        "janv_11": 422.7,
+        "juin_11": 350.0,
+        "mai_11": 388.9,
+        "aout_11": 239.8,
+        "sept_11": 379.1,
+        "dec_11": 434.1,
+        "oct_11": 387.7,
+        "nov_11": 356.9,
+        "granularite": 75017,
+        "fevr_11": 364.4,
+        "total_arrondissement_2011": 4414.1,
+        "avr_11": 372.8,
+        "juil_11": 366.3,
+        "mars_11": 351.4
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "a4a89d3c0281efd2ba7b8364def6b2cacfb720d7",
+    "fields": {
+        "janv_11": 224.0,
+        "juin_11": 252.2,
+        "mai_11": 234.0,
+        "aout_11": 152.8,
+        "sept_11": 234.1,
+        "dec_11": 250.0,
+        "oct_11": 207.8,
+        "nov_11": 195.9,
+        "granularite": 75007,
+        "fevr_11": 199.6,
+        "total_arrondissement_2011": 2619.0,
+        "avr_11": 236.2,
+        "juil_11": 215.2,
+        "mars_11": 217.2
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}, {
+    "datasetid": "tonnages_de_la_collecte_du_verre",
+    "recordid": "8b98eb44257eec639326f2ff4fbd0b8463dc15f5",
+    "fields": {
+        "janv_11": 301.1,
+        "juin_11": 340.8,
+        "mai_11": 302.4,
+        "aout_11": 231.2,
+        "sept_11": 269.3,
+        "dec_11": 310.8,
+        "oct_11": 303.3,
+        "nov_11": 343.9,
+        "granularite": 75014,
+        "fevr_11": 296.0,
+        "total_arrondissement_2011": 3589.0,
+        "avr_11": 266.1,
+        "juil_11": 269.4,
+        "mars_11": 354.7
+    },
+    "record_timestamp": "2016-08-27T18:20:20+02:00"
+}]

@@ -1,0 +1,271 @@
+[{
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "5d3f3e96cc6fe52ebb2061cae687a4f4c5fd3d98",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 154647,
+        "code_insee": "75111",
+        "nom_commune": "Paris 11\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "f03ca131c08740832d8f2b6fa59755c900ee5b65",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 57786,
+        "code_insee": "75107",
+        "nom_commune": "Paris 7\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "77b0276c16935eafe463197e2eba588bc116c1ac",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 17443,
+        "code_insee": "75101",
+        "nom_commune": "Paris 1\u00e8re arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "a5e3f23df1435ac50515f102064d9321785acb20",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 60800,
+        "code_insee": "75105",
+        "nom_commune": "Paris 5\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "05a01e6449c32f60d59e9ec1deaea9fc82b88b5c",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 198042,
+        "code_insee": "75120",
+        "nom_commune": "Paris 20\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "9ff34923c94edf20eaf3ded279707b5b0823b738",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 183260,
+        "code_insee": "75113",
+        "nom_commune": "Paris 13\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "1fb0567b8b00792f3dfdc8bde77a7cc63a0571cd",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 274,
+        "code_insee": "71343",
+        "nom_commune": "Paris-l'H\u00f4pital"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "00c87698198ab803031d84dcf633ffe401635c94",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 27887,
+        "code_insee": "75104",
+        "nom_commune": "Paris 4\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "e8060c709a08b29a813622a6a8e9ab5ef0a28bf2",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 203127,
+        "code_insee": "75118",
+        "nom_commune": "Paris 18\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "e18149780ec3c252686a533ef377d7006a377fa4",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 238395,
+        "code_insee": "75115",
+        "nom_commune": "Paris 15\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "5f77cca704b26516446f31f8925ea37eb8e78c9d",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 22927,
+        "code_insee": "75102",
+        "nom_commune": "Paris 2\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "94309c584e69f559db0271d888906b6933759534",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 4538,
+        "code_insee": "62826",
+        "nom_commune": "Le Touquet-Paris-Plage"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "2b6552de1bbd8a11b9a48e8a9022080c40dd9bdd",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 1894,
+        "code_insee": "95241",
+        "nom_commune": "Fontenay-en-Parisis"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "a30d104800806368139bbd92fee2a5514a3da5f1",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 186090,
+        "code_insee": "75119",
+        "nom_commune": "Paris 19\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "ba78721f5ef53cc5b6bbcac19105cdef0d1972eb",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 140317,
+        "code_insee": "75114",
+        "nom_commune": "Paris 14\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "db241362955d4979ba742eb41f99055f72937f5e",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 544,
+        "code_insee": "82137",
+        "nom_commune": "Parisot"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "88856b823332af1cd05882677c08eb1b8547b985",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 917,
+        "code_insee": "81202",
+        "nom_commune": "Parisot"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "0a247ba38c02dbaa7462d5c094845e67fa9712c4",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 23497,
+        "code_insee": "95176",
+        "nom_commune": "Cormeilles-en-Parisis"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "e135c700cca132945fe0f1138d5ba4d4bbe05575",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 12227,
+        "code_insee": "38485",
+        "nom_commune": "Seyssinet-Pariset"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "d3cce74ea493e581d368257120792829c9c59378",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 94027,
+        "code_insee": "75110",
+        "nom_commune": "Paris 10\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "d86c48652a59d50f97f90c569c7522d9c20a93e5",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 144402,
+        "code_insee": "75112",
+        "nom_commune": "Paris 12\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "0a6d6701f5f3f8045936801235424a78fa2d9c4a",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 40589,
+        "code_insee": "75108",
+        "nom_commune": "Paris 8\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "62f04dd24dfcb23f2b2f19b7a2a37a7c404e4ced",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 170174,
+        "code_insee": "75117",
+        "nom_commune": "Paris 17\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "52cbe95c725b7d76eb2a9fceee084619cde1b6ca",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 60120,
+        "code_insee": "75109",
+        "nom_commune": "Paris 9\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "b0a5ca6956bce5b7c66474f9d552e9b7a7ba8e87",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 43880,
+        "code_insee": "75106",
+        "nom_commune": "Paris 6\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "e7d2b48ee9786b6d5894d0dbeaf4eea323cbedb9",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 36120,
+        "code_insee": "75103",
+        "nom_commune": "Paris 3\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}, {
+    "datasetid": "historique-des-populations-legales",
+    "recordid": "772a66db8c02c8196c99f027ab670a8c344d66ce",
+    "fields": {
+        "annee": "2011",
+        "population_municipale": 169942,
+        "code_insee": "75116",
+        "nom_commune": "Paris 16\u00e8me arrondissement"
+    },
+    "record_timestamp": "2017-07-26T16:27:51+02:00"
+}]

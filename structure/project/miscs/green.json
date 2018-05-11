@@ -1,0 +1,381 @@
+[{
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "44679e34a4deaf5c34904123949f59df655d286c",
+    "fields": {
+        "dec_11": 301.1,
+        "juin_11": 288.4,
+        "mai_11": 287.8,
+        "sept_11": 281.3,
+        "granularite": 75007,
+        "oct_11": 284.3,
+        "nov_11": 296.4,
+        "janv_11": 288.1,
+        "fevr_11": 249.1,
+        "aout_11": 185.6,
+        "avr_11": 255.8,
+        "juil_11": 249.6,
+        "mars_11": 303.7
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "d640d37c5333951e599ecf7b36cbed71497f9961",
+    "fields": {
+        "dec_11": 601.4,
+        "juin_11": 581.7,
+        "mai_11": 595.9,
+        "sept_11": 597.8,
+        "granularite": 75013,
+        "oct_11": 575.7,
+        "nov_11": 580.5,
+        "janv_11": 596.5,
+        "fevr_11": 540.2,
+        "aout_11": 490.5,
+        "avr_11": 558.6,
+        "juil_11": 539.2,
+        "mars_11": 618.5
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "c3dfb2f98f9bc43eb353e80a23cdda818274f50a",
+    "fields": {
+        "dec_11": 484.3,
+        "juin_11": 446,
+        "mai_11": 405.3,
+        "sept_11": 449.3,
+        "granularite": 75014,
+        "oct_11": 446.3,
+        "nov_11": 453.1,
+        "janv_11": 464,
+        "fevr_11": 404.9,
+        "aout_11": 348.7,
+        "avr_11": 420.2,
+        "juil_11": 412.9,
+        "mars_11": 465.3
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "6af4ae9fadcf9400bcf8a58b42bfc8b8e557d031",
+    "fields": {
+        "dec_11": 935.8,
+        "juin_11": 888.6,
+        "mai_11": 876.8,
+        "sept_11": 913.3,
+        "granularite": 75015,
+        "oct_11": 878.7,
+        "nov_11": 895.7,
+        "janv_11": 903.1,
+        "fevr_11": 801.4,
+        "aout_11": 674.8,
+        "avr_11": 835.5,
+        "juil_11": 628.8,
+        "mars_11": 937.5
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "069f13207b85d66ba2e57bcc6d34e5a9a6656ec5",
+    "fields": {
+        "dec_11": 513.5,
+        "juin_11": 446.4,
+        "mai_11": 363.6,
+        "sept_11": 416.4,
+        "granularite": 75017,
+        "oct_11": 451.5,
+        "nov_11": 475.1,
+        "janv_11": 451.1,
+        "fevr_11": 412.4,
+        "aout_11": 332.3,
+        "avr_11": 422.7,
+        "juil_11": 409.5,
+        "mars_11": 491.6
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "2378e69eb73006eb8971eaa1fa5885fc2916cc99",
+    "fields": {
+        "dec_11": 470.9,
+        "juin_11": 456.6,
+        "mai_11": 458.3,
+        "sept_11": 464.6,
+        "granularite": 75018,
+        "oct_11": 453.4,
+        "nov_11": 478.5,
+        "janv_11": 427,
+        "fevr_11": 394.3,
+        "aout_11": 361.8,
+        "avr_11": 419.9,
+        "juil_11": 418,
+        "mars_11": 455.2
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "51f7b05da966dee9bf2e79701c6c0e090d470ec0",
+    "fields": {
+        "dec_11": 354.5,
+        "juin_11": 340.7,
+        "mai_11": 336.9,
+        "sept_11": 345.6,
+        "granularite": 75019,
+        "oct_11": 335.6,
+        "nov_11": 367,
+        "janv_11": 323.4,
+        "fevr_11": 287.3,
+        "aout_11": 281,
+        "avr_11": 317.8,
+        "juil_11": 311.6,
+        "mars_11": 350.3
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "00664f1d18c04ab14cb031d96c317e80fdc911a0",
+    "fields": {
+        "dec_11": 129.8,
+        "juin_11": 127.6,
+        "mai_11": 133.2,
+        "sept_11": 144.3,
+        "granularite": 75002,
+        "oct_11": 145.1,
+        "nov_11": 129.5,
+        "janv_11": 153,
+        "fevr_11": 125.8,
+        "aout_11": 114.3,
+        "avr_11": 126.6,
+        "juil_11": 126.7,
+        "mars_11": 136.6
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "72c231c11d8f907ea9f588eee571adfc3ca72738",
+    "fields": {
+        "dec_11": 133.7,
+        "juin_11": 120.5,
+        "mai_11": 123.2,
+        "sept_11": 130.5,
+        "granularite": 75004,
+        "oct_11": 123,
+        "nov_11": 124.3,
+        "janv_11": 116.3,
+        "fevr_11": 115.7,
+        "aout_11": 97.6,
+        "avr_11": 115,
+        "juil_11": 114.5,
+        "mars_11": 133.4
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "63e3b9886ad312f0cd4c2802aef133485063d05a",
+    "fields": {
+        "dec_11": 224.4,
+        "juin_11": 236.4,
+        "mai_11": 199.4,
+        "sept_11": 266.6,
+        "granularite": 75008,
+        "oct_11": 230.3,
+        "nov_11": 257.7,
+        "janv_11": 252.6,
+        "fevr_11": 246.7,
+        "aout_11": 189.4,
+        "avr_11": 232.5,
+        "juil_11": 175.4,
+        "mars_11": 252.9
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "77f7ba0ca12010a389cbd0839ac66d14b05e50fe",
+    "fields": {
+        "dec_11": 502,
+        "juin_11": 488,
+        "mai_11": 402,
+        "sept_11": 506,
+        "granularite": 75012,
+        "oct_11": 495,
+        "nov_11": 493,
+        "janv_11": 484.2,
+        "fevr_11": 445.9,
+        "aout_11": 409,
+        "avr_11": 452,
+        "juil_11": 456,
+        "mars_11": 517
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "730a540c8ee73ddefda6ef75cfc76a0372658a22",
+    "fields": {
+        "dec_11": 699.9,
+        "juin_11": 666.3,
+        "mai_11": 563.4,
+        "sept_11": 679.7,
+        "granularite": 75016,
+        "oct_11": 656.1,
+        "nov_11": 662.6,
+        "janv_11": 584.1,
+        "fevr_11": 571.2,
+        "aout_11": 433.2,
+        "avr_11": 590.3,
+        "juil_11": 570.4,
+        "mars_11": 684.7
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "c03abbbcae10e92625061301de59e28273b61627",
+    "fields": {
+        "dec_11": 410,
+        "juin_11": 381.7,
+        "mai_11": 273.5,
+        "sept_11": 414,
+        "granularite": 75020,
+        "oct_11": 350,
+        "nov_11": 410.6,
+        "janv_11": 394.1,
+        "fevr_11": 366.3,
+        "aout_11": 297,
+        "avr_11": 367.1,
+        "juil_11": 353.4,
+        "mars_11": 422.7
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "030d971631adbea0aeef4889923c025a0d9e3a62",
+    "fields": {
+        "dec_11": 79.1,
+        "juin_11": 72,
+        "mai_11": 73.9,
+        "sept_11": 75.5,
+        "granularite": 75001,
+        "oct_11": 75.7,
+        "nov_11": 65.8,
+        "janv_11": 75.3,
+        "fevr_11": 60.4,
+        "aout_11": 56.4,
+        "avr_11": 59.5,
+        "juil_11": 57.9,
+        "mars_11": 71.2
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "6ee4aa9caf5e2b5a52dcc1e5fb78985c907097e9",
+    "fields": {
+        "dec_11": 251.6,
+        "juin_11": 224,
+        "mai_11": 185,
+        "sept_11": 203.4,
+        "granularite": 75005,
+        "oct_11": 232.1,
+        "nov_11": 227.6,
+        "janv_11": 247,
+        "fevr_11": 211,
+        "aout_11": 162.9,
+        "avr_11": 218,
+        "juil_11": 213.3,
+        "mars_11": 251
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "7c5c551e076d9be889abf65630eebe387b2a99fc",
+    "fields": {
+        "dec_11": 204.1,
+        "juin_11": 199,
+        "mai_11": 180,
+        "sept_11": 183.1,
+        "granularite": 75006,
+        "oct_11": 195.5,
+        "nov_11": 213.8,
+        "janv_11": 222,
+        "fevr_11": 189,
+        "aout_11": 134.8,
+        "avr_11": 192,
+        "juil_11": 171.8,
+        "mars_11": 218
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "3580f86f6fa79102044646d343a6c18a036582b5",
+    "fields": {
+        "dec_11": 283.2,
+        "juin_11": 267.3,
+        "mai_11": 284.3,
+        "sept_11": 280.6,
+        "granularite": 75010,
+        "oct_11": 275.6,
+        "nov_11": 284.6,
+        "janv_11": 273,
+        "fevr_11": 248.6,
+        "aout_11": 210.3,
+        "avr_11": 255.2,
+        "juil_11": 246.6,
+        "mars_11": 292.2
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "55171f7171e0bb88dafe674645cf9e5f3b367041",
+    "fields": {
+        "dec_11": 487.9,
+        "juin_11": 443,
+        "mai_11": 466,
+        "sept_11": 511.9,
+        "granularite": 75011,
+        "oct_11": 490.6,
+        "nov_11": 469.2,
+        "janv_11": 487.2,
+        "fevr_11": 422.2,
+        "aout_11": 367.5,
+        "avr_11": 437,
+        "juil_11": 373.5,
+        "mars_11": 491
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "9a7d83bcea03c5adf75851693968f5d7f669455e",
+    "fields": {
+        "dec_11": 189.9,
+        "juin_11": 181.9,
+        "mai_11": 203.2,
+        "sept_11": 208.6,
+        "granularite": 75003,
+        "oct_11": 186.5,
+        "nov_11": 192.9,
+        "janv_11": 183.9,
+        "fevr_11": 173.1,
+        "aout_11": 153.6,
+        "avr_11": 183,
+        "juil_11": 191.2,
+        "mars_11": 204.2
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}, {
+    "datasetid": "tonnages_des_dechets_bacs_jaunes",
+    "recordid": "d0d3bb2283c58b3396f223626283542f0b3ac393",
+    "fields": {
+        "dec_11": 235.7,
+        "juin_11": 206.9,
+        "mai_11": 151.7,
+        "sept_11": 223.8,
+        "granularite": 75009,
+        "oct_11": 203.6,
+        "nov_11": 213.8,
+        "janv_11": 208.3,
+        "fevr_11": 197.1,
+        "aout_11": 163.3,
+        "avr_11": 197.9,
+        "juil_11": 199.9,
+        "mars_11": 220.4
+    },
+    "record_timestamp": "2016-08-27T18:20:19+02:00"
+}]

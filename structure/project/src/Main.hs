@@ -105,8 +105,8 @@ writeXML districts =
         selem "tonnagesDechets"
         [
           selem "verre" [ txt (show glass) ],
-          selem "vert" [ txt (show glass) ],
-          selem "jaune" [ txt (show glass) ]
+          selem "vert" [ txt (show green) ],
+          selem "jaune" [ txt (show yellow) ]
         ]
       ]
     globalXML :: ArrowXml a => [ a XmlTree XmlTree ] -> a XmlTree XmlTree

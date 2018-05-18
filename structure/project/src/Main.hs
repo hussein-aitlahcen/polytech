@@ -35,6 +35,7 @@ import qualified Data.ByteString.Lazy as BS
 import           Data.List            (find)
 import           Data.Semigroup       ((<>))
 import           System.Environment   (getArgs)
+import           Text.XML.HXT.Core
 import           Types
 
 type Content = BS.ByteString
@@ -89,7 +90,30 @@ combineTrashes (history, glassTrash, yellowTrash, greenTrash) = mkDistrict . com
       District (historyDistrictCode h) (historyCity h) (historyYear h) (historyPopulation h) (TrashTonnage glassVolume yellowVolume greenVolume)
 
 writeXML :: AppContext m => [District] -> m ()
-writeXML x = mapM_ (debug . show) x
+writeXML districts =
+  let xml = globalXML $ districtXML <$> districts
+  in liftIO $ runX (root [] [xml] >>> writeDocument [withIndent yes] "./miscs/output.xml") *> pure ()
+  where
+    districtXML :: ArrowXml a => District -> a XmlTree XmlTree
+    districtXML (District code city year pop (TrashTonnage glass green yellow)) =
+      selem "arrondissement"
+      [
+        selem "code"       [ txt (show code) ],
+        selem "commune"    [ txt city ],
+        selem "annee"      [ txt (show year) ],
+        selem "population" [ txt (show pop) ],
+        selem "tonnagesDechets"
+        [
+          selem "verre" [ txt (show glass) ],
+          selem "vert" [ txt (show glass) ],
+          selem "jaune" [ txt (show glass) ]
+        ]
+      ]
+    globalXML :: ArrowXml a => [ a XmlTree XmlTree ] -> a XmlTree XmlTree
+    globalXML tree
+      = selem "arrondissements"
+        [ selem "arrondissement" tree]
+
 
 debug :: AppContext m => String -> m ()
 debug = liftIO . putStrLn

@@ -4,14 +4,16 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, aeson, base, bytestring, mtl, stdenv, unix }:
+  f = { mkDerivation, aeson, base, bytestring, hxt, mtl, stdenv
+      , unix
+      }:
       mkDerivation {
         pname = "project";
         version = "0.1.0.0";
         src = ./.;
         isLibrary = false;
         isExecutable = true;
-        executableHaskellDepends = [ aeson base bytestring mtl unix ];
+        executableHaskellDepends = [ aeson base bytestring hxt mtl unix ];
         license = stdenv.lib.licenses.gpl3;
       };
 
